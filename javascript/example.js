@@ -1,6 +1,6 @@
 const { Lingolette } = require('./lingolette')
 
-const api = new Lingolette('YOUR_USERNAME', 'YOUR_SECRET')
+const api = new Lingolette('YOUR_ORG_ID', 'YOUR_ORG_SECRET')
 
 api.call('org', 'createUserSession', {
   userId: 'YOUR_ORG_USER_ID',
