@@ -11,19 +11,19 @@ namespace lingolette
     {
         protected WebRequest request;
 
-        protected string username;
+        protected string orgId;
         protected string secret;
         protected string apiHost = "lingolette.com";
         protected string apiVersion = "1";
 
-        public CSharpAPI (string username, string secret)
+        public CSharpAPI (string orgId, string secret)
         {
-            if (username == null || secret == null)
+            if (orgId == null || secret == null)
             {
-                throw new System.Exception ("Both username and secret are required.");
+                throw new System.Exception ("Both orgId and secret are required.");
             }
 
-            this.username = username;
+            this.orgId = orgId;
             this.secret = secret;
         }
 
@@ -65,7 +65,7 @@ namespace lingolette
             request.Method = "POST";
               request.Headers ["x-api-version"] = apiVersion;
               request.Headers ["x-random"] = salt;
-              request.Headers ["x-auth-id"] = username;
+              request.Headers ["x-auth-id"] = orgId;
               request.Headers ["x-auth-key"] = hash;
 
             byte[] byteArray = Encoding.UTF8.GetBytes ("{\"method\":\"" + method + "\",\"data\":" + jsonString + "}");
