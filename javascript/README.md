@@ -2,7 +2,5 @@ Run example
 ---
 
 ```
-deno run --allow-net=lingolette.com,localhost:4000 example.ts
+node example.js
 ```
-
-TODO: add usage example for Node
