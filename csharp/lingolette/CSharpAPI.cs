@@ -14,7 +14,7 @@ namespace lingolette
         protected string username;
         protected string secret;
         protected string apiHost = "lingolette.com";
-        protected string apiVersion = "2";
+        protected string apiVersion = "1";
 
         public CSharpAPI (string username, string secret)
         {
