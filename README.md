@@ -10,10 +10,10 @@ ___
 
 **Added:**
 * JavaScript
+* C#
+* PHP
 
 **To add:**
 * TypeScript
-* PHP
 * Java
 * Python
-* C#
